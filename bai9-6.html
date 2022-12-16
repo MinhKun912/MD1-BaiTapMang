@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="in">
+  <input id="inp" placeholder="Nhap Mang"  ><button onclick="isPalidrome()" id="addBtn" >ADD</button>
+
+</div>
+<script>
+   function isPalidrome(){
+       let n=document.getElementById('inp').value;
+       let x=n.split("").reverse();
+       let a=x.join("");
+      if (n==a){
+          document.write('doi xung')
+      }else {
+          document.write('khong doi xung')
+      }
+   }
+</script>
+</body>
+</html>

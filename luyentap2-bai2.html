@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Tính Diện Tích Và Chu Vi Hình tròn</h1>
+<input id="inp" oninput="tinhVvaS()" type="number" placeholder="Nhap BAn Kinh"><br>
+<label id="tinhs">Dien Tich</label><br>
+<label id="tinhv">Chu vi</label>
+<script>
+  function tinhVvaS(x){
+    x=document.getElementById('inp').value;
+    let s=(x*x)*3.14;
+    let c=(x*2)*3.14;
+    document.getElementById('tinhs').innerHTML="Dien tich" + +s +"cm2";
+    document.getElementById('tinhv').innerHTML="chu vi" + +c +"cm";
+  }
+
+</script>
+</body>
+</html>

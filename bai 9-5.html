@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        td {
+            border: 1px solid black;
+            padding: 5px 10px;
+        }
+    </style>
+</head>
+<body>
+<input id="new" placeholder="New Product">
+<button onclick="addNew()">ADD</button>
+<table id="ban">
+
+</table>
+<script>
+    let list = [];
+
+    function addNew() {
+        let n = document.getElementById('new').value;
+        list.push(n)
+        show(list)
+    }
+
+    function show(arr) {
+        let x = "";
+        for (let i = 0; i < arr.length; i++) {
+            x += `<tr> <td>${arr[i]}</td>
+<td><button onclick="editPt(${i})">EDIT</button></td>
+<td><button onclick="xoaPt(${i})">DELETE</button> </tr></td>`
+        }
+        document.getElementById("ban").innerHTML = x;
+
+    }
+
+    function xoaPt(idex) {
+        list.splice(idex, 1)
+        show(list)
+    }
+
+    function editPt(idex) {
+        list[idex] = prompt("nhap gia tri moi vao")
+        show(list)
+    }
+
+</script>
+</body>
+</html>

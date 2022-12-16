@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+<input oninput="meterToFoot()" id="met" type="number" placeholder="Nhap met"><br>
+<label id="dis1"></label><br>
+<input oninput="footToMeter()" id="feet" type="number" placeholder="Nhap feet"><br>
+<label id="dis2"></label>
+
+<script>
+
+
+
+
+    function footToMeter() {
+        let foot = document.getElementById('feet').value;
+        metters = 0.305 * foot;
+        document.getElementById('dis2').innerHTML = metters +"met";
+
+    }
+
+    function meterToFoot() {
+        let metters = document.getElementById('met').value;
+        foot = 3.279 * metters;
+        console.log()
+        document.getElementById('dis1').innerHTML = foot +"feet";
+    }
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<h1>Tinh giai thua</h1>
+<body><input oninput="giaiThua()" id="nhap" placeholder="Nhap so bat ki"><br>
+<label id="hienthi"></label>
+<script>
+  function giaiThua(c,n){
+    n=document.getElementById('nhap').value;
+    let fact=1;
+    for (c=1;c<=n;c++){
+      fact=fact*c;
+    }
+    document.getElementById('hienthi').innerHTML=fact;
+  }
+</script>
+</body>
+</html>
